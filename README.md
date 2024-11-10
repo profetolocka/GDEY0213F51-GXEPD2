@@ -1,5 +1,3 @@
-# GDEY0213F51-GXEPD2
- 
 
 [Go to english version](#Projects-for-M5Stick-Made-in-UIFlow-V1)
 
@@ -13,9 +11,7 @@ Este repositorio tiene por finalidad mostrar distintos ejemplos de aplicación d
 
 ## Contenido
 
-El repositorio está organizado en carpetas, cada una conteniendo un proyecto completo. Cada carpeta contiene un archivo README con explicaciones y otra información adicional.
-
-La carpeta **Pruebas** contiene programas simples para comprobar ideas o el funcionamiento de algunos componentes del M5Stick
+El repositorio está organizado en carpetas, cada una conteniendo un ejemplo distinto. Cada carpeta contiene un archivo README con explicaciones y otra información adicional.
 
 ## Licencia
 
