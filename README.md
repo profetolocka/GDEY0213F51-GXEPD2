@@ -9,7 +9,7 @@
 
 Este repositorio tiene por finalidad mostrar distintos ejemplos de aplicación del ePaper GDEY0213F51-GXEPD2 en combinación con la placa adaptadora de Seeed Studio. 
 
-![alt text](images/ExpansionBoard_RA4M1.webp)
+![alt text](Images/ExpansionBoard_RA4M1.webp)
 
 ## Contenido
 
