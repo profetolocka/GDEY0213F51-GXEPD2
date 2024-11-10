@@ -37,7 +37,7 @@ This repository aims to showcase various application examples of the GDEY0213F51
 
 ## Content
 
-The repository is organized into folders, each containing a different example. Each folder includes a README file with explanations and additional information. The Español and English folders organize the examples in these two languages.
+The repository is organized into folders, each containing a different example. Each folder includes a README file with explanations and additional information. The **Español** and **English** folders organize the examples in these two languages.
 
 ## License
 
