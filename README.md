@@ -44,3 +44,9 @@ The repository is organized into folders, each containing a different example. E
 All projects are **open source** (open source and open hardware) and are published under an **MIT** license.
 
 ## Contact
+
+You can contact me and see the rest of my work at:
+
+- Github: [@profetolocka](https://github.com/profetolocka)
+- Blog: [Profe Tolocka](https://www.profetolocka.com.ar)
+- Redes: [linktr.ee](https://linktr.ee/profetolocka)
