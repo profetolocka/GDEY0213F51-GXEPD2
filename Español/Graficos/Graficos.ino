@@ -27,71 +27,77 @@ void setup()
   
   display.setTextSize(1);
   
-  // Definir el centro y el radio del círculo
-  int centerX = 60;
-  int centerY = 80;
-  int radius = 40; // Radio es la mitad del diámetro (80/2)
-
-  // Limpiar la pantalla
+   // Limpiar la pantalla
   display.setFullWindow();
-  display.firstPage();
-  do {
-    display.fillScreen(GxEPD_YELLOW); // Fondo blanco
 
-    //1.Gráfico de tortas
+  display.fillScreen(GxEPD_YELLOW); // Fondo blanco
+
+  // 1.Gráfico de tortas
     
-    // Dibujar el círculo relleno de rojo
-    display.fillCircle(centerX, centerY, radius, GxEPD_RED);
+  // Definir el centro y el radio del círculo
+  int centerX = 65;
+  int centerY = 80;
+  int radius = 40; 
 
-    // Dibujar un punto en el centro
-    //display.drawPixel(centerX, centerY, GxEPD_WHITE);
+  // Dibujar el círculo relleno de rojo
+  display.fillCircle(centerX, centerY, radius, GxEPD_RED);
 
-    // Calcular los ángulos para las secciones del gráfico
-    float angle1 = 0;
-    float angle2 = 144; // 40% de 360 grados (0.4 * 360)
-    float angle3 = 252; // 144 + 108 (30% de 360 grados)
+  // Calcular los ángulos para las secciones del gráfico
+  float angle1 = 0;
+  float angle2 = 144; // 40% de 360 grados (0.4 * 360)
+  float angle3 = 252; // 144 + 108 (30% de 360 grados)
 
-    // Convertir grados a radianes
-    float angle1_rad = angle1 * PI / 180;
-    float angle2_rad = angle2 * PI / 180;
-    float angle3_rad = angle3 * PI / 180;
+  // Convertir grados a radianes
+  float angle1_rad = angle1 * PI / 180;
+  float angle2_rad = angle2 * PI / 180;
+  float angle3_rad = angle3 * PI / 180;
 
-    // Calcular las coordenadas de los puntos en el borde del círculo
-    int x1 = centerX + radius * cos(angle1_rad);
-    int y1 = centerY + radius * sin(angle1_rad);
+  // Calcular las coordenadas de los puntos en el borde del círculo
+  int x1 = centerX + radius * cos(angle1_rad);
+  int y1 = centerY + radius * sin(angle1_rad);
 
-    int x2 = centerX + radius * cos(angle2_rad);
-    int y2 = centerY + radius * sin(angle2_rad);
+  int x2 = centerX + radius * cos(angle2_rad);
+  int y2 = centerY + radius * sin(angle2_rad);
 
-    int x3 = centerX + radius * cos(angle3_rad);
-    int y3 = centerY + radius * sin(angle3_rad);
+  int x3 = centerX + radius * cos(angle3_rad);
+  int y3 = centerY + radius * sin(angle3_rad);
 
-    // Dibujar las líneas desde el centro hasta el borde
-    display.drawLine(centerX, centerY, x1, y1, GxEPD_WHITE);
-    display.drawLine(centerX, centerY, x2, y2, GxEPD_WHITE);
-    display.drawLine(centerX, centerY, x3, y3, GxEPD_WHITE);
+  // Dibujar las líneas desde el centro hasta el borde
+  display.drawLine(centerX, centerY, x1, y1, GxEPD_WHITE);
+  display.drawLine(centerX, centerY, x2, y2, GxEPD_WHITE);
+  display.drawLine(centerX, centerY, x3, y3, GxEPD_WHITE);
 
-    //2.Gráfico de barras
+  // 2.Gráfico de barras
 
-    display.drawLine (120,110, 220,110, GxEPD_BLACK);
-    display.drawLine (120,110, 120, 40, GxEPD_BLACK);
+  int originX = 135;  //X del origen de coordenadas
+  int originY = 115;  //Y del origen de coordenadas
+  int barW = 20;      //Ancho de las barras
+  int barGap = 5;     //Separacion entre barras
+  int barH1 = 50;     //Altura barra1
+  int barH2 = 70;     //Altura barra2
+  int barH3 = 45;     //Altura barra3
 
-    display.fillRect(130, 110-50, 20, 50, GxEPD_RED);
-    display.fillRect(155, 110-50, 20, 40, GxEPD_RED);
-    display.fillRect(180, 110-50, 20, 45, GxEPD_RED);
+  // Dibujar los ejes X e Y
+  display.drawLine (originX, originY, originX+90, originY,    GxEPD_BLACK);
+  display.drawLine (originX, originY, originX,     originY-70, GxEPD_BLACK);
 
+  // Dibujar las barras
+  display.fillRect(originX+barGap,          originY-barH1, barW, barH1, GxEPD_RED);
+  display.fillRect(originX+2*barGap+barW,   originY-barH2, barW, barH2, GxEPD_RED);
+  display.fillRect(originX+3*barGap+2*barW, originY-barH3, barW, barH3, GxEPD_RED);
 
+  // 3.Texto del título
     
+  // Configuración del texto
+  display.setTextColor(GxEPD_BLACK);
+  display.setCursor(15, 20);
+  display.setFont(&FreeMonoBold12pt7b); 
 
+  // Imprimir texto
+  display.print ("ACME Corporation");
 
-    
-    display.setTextColor(GxEPD_BLACK);
-
-    display.setCursor(15, 20);
-    display.setFont(&FreeMonoBold12pt7b); 
-    display.print ("ACME Corporation");
-
-  } while (display.nextPage());
+  // Refrescar pantalla
+  display.display ();
 
 }
 
