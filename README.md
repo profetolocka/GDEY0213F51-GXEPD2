@@ -1,5 +1,5 @@
 
-[Go to english version](#Projects-for-M5Stick-Made-in-UIFlow-V1)
+[Go to english version](#Examples of using the GDEY0213F51 ePaper with the GXEPD2 library in Arduino)
 
 # Ejemplos de uso del ePaper GDEY0213F51 con la librería GXEPD2 en Arduino
 
@@ -25,7 +25,7 @@ Puedes contactarme y ver el resto de mi trabajo en:
 - Blog: [Profe Tolocka](https://www.profetolocka.com.ar)
 - Redes: [linktr.ee](https://linktr.ee/profetolocka)
 
-===
+****
 # Examples of using the GDEY0213F51 ePaper with the GXEPD2 library in Arduino
 
 ## Introduction
