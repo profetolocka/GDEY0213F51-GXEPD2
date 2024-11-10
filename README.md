@@ -1,5 +1,5 @@
 
-[Go to english version](#Examples of using the GDEY0213F51 ePaper with the GXEPD2 library in Arduino)
+[Go to english version](#Examples-of-using-the-GDEY0213F51-ePaper-with-the-GXEPD2-library-in-Arduino)
 
 # Ejemplos de uso del ePaper GDEY0213F51 con la librería GXEPD2 en Arduino
 
