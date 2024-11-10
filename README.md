@@ -1,7 +1,5 @@
-# GDEY0213F51-GXEPD2
- 
 
-[Go to english version](#Projects-for-M5Stick-Made-in-UIFlow-V1)
+[Go to english version](#Examples-of-using-the-GDEY0213F51-ePaper-with-the-GXEPD2-library-in-Arduino)
 
 # Ejemplos de uso del ePaper GDEY0213F51 con la librería GXEPD2 en Arduino
 
@@ -9,13 +7,12 @@
 
 Este repositorio tiene por finalidad mostrar distintos ejemplos de aplicación del ePaper GDEY0213F51-GXEPD2 en combinación con la placa adaptadora de Seeed Studio. 
 
-![alt text](images/ExpansionBoard_RA4M1.webp)
+![alt text](Images/ExpansionBoard_RA4M1.webp)
 
 ## Contenido
 
-El repositorio está organizado en carpetas, cada una conteniendo un proyecto completo. Cada carpeta contiene un archivo README con explicaciones y otra información adicional.
-
-La carpeta **Pruebas** contiene programas simples para comprobar ideas o el funcionamiento de algunos componentes del M5Stick
+El repositorio está organizado en carpetas, cada una conteniendo un ejemplo distinto. Cada carpeta contiene un archivo README con explicaciones y otra información adicional.
+Las carpetas **Español** y **English** organizan los ejemplos en estos dos idiomas.
 
 ## Licencia
 
@@ -29,28 +26,27 @@ Puedes contactarme y ver el resto de mi trabajo en:
 - Blog: [Profe Tolocka](https://www.profetolocka.com.ar)
 - Redes: [linktr.ee](https://linktr.ee/profetolocka)
 
-# Projects for M5Stick Made in UIFlow V1
+****
+# Examples of using the GDEY0213F51 ePaper with the GXEPD2 library in Arduino
 
 ## Introduction
 
-This repository aims to showcase the projects I have developed with the M5Stick C Plus 2 programmed in UIFlow Version 1. It is a collection of projects created over time and includes test programs, utilities, and specific projects, ranging from simple and straightforward applications to more complex projects.
+This repository aims to showcase various application examples of the GDEY0213F51-GXEPD2 ePaper in combination with the Seeed Studio adapter board.
 
-If you are a student, hobbyist, or maker, I hope these projects will help you learn how to use and program the M5Stick so you can create your own designs.
-
-## M5Stick
-
-The M5Stick is a member of the M5Stack product family. It is a fantastic device for prototyping IoT, robotics, and any other application you can think of. It includes a display, battery, USB connection, Bluetooth, and Wi-Fi, as well as a wide range of sensors. By using the expansion ports, it can be connected to a large number of modules, which easily extend its capabilities.
-
-![alt text](images/m5stickC2.webp)
+![alt text](Images/ExpansionBoard_RA4M1.webp)
 
 ## Content
 
-The repository is organized into folders, each containing a complete project. Each folder includes a README file with explanations and additional information.
-
-The **Pruebas** folder contains simple programs to test ideas or the functionality of some M5Stick components.
+The repository is organized into folders, each containing a different example. Each folder includes a README file with explanations and additional information. The **Español** and **English** folders organize the examples in these two languages.
 
 ## License
 
 All projects are **open source** (open source and open hardware) and are published under an **MIT** license.
 
 ## Contact
+
+You can contact me and see the rest of my work at:
+
+- Github: [@profetolocka](https://github.com/profetolocka)
+- Blog: [Profe Tolocka](https://www.profetolocka.com.ar)
+- Social: [linktr.ee](https://linktr.ee/profetolocka)
