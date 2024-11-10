@@ -12,6 +12,7 @@ Este repositorio tiene por finalidad mostrar distintos ejemplos de aplicación d
 ## Contenido
 
 El repositorio está organizado en carpetas, cada una conteniendo un ejemplo distinto. Cada carpeta contiene un archivo README con explicaciones y otra información adicional.
+Las carpetas *Español* y *English* organizan los ejemplos en estos dos idiomas.
 
 ## Licencia
 
