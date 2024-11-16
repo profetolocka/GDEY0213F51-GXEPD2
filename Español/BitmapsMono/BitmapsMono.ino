@@ -2,12 +2,11 @@
 #include <GxEPD2_4C.h>
 
 //Incluir las definiciones de las fuentes
-#include <Fonts/FreeMonoBold12pt7b.h>
+#include <Fonts/FreeSansBold18pt7b.h>
+#include <Fonts/FreeSansBold24pt7b.h>
 
 // Incluir el bitmap
-#include "gatoNegroRotado.h"
-#include "gatoRojoRotado.h"
-#include "gatoAmarilloRotado.h"
+#include "cafe120.h"
 
 // Definición de pines para placa adaptadora de Seeed Studio
 const int EINK_BUSY = D5;   // D5
@@ -25,26 +24,27 @@ void setup()
   // Inicialización del epaper
   display.init(115200);
   display.setFullWindow();
-  display.fillScreen(GxEPD_WHITE);
   display.setRotation(1);
   
   display.setTextSize(1);
   
   // Limpiar la pantalla
-  display.fillScreen(GxEPD_WHITE); // Fondo blanco
+  display.fillScreen(GxEPD_YELLOW); // Fondo amarillo
 
   // Cargar bitmap
-  display.drawBitmap(0, 0, gImage_gatoNegroRotado, 250, 128, GxEPD_BLACK);
-  display.drawBitmap(0, 0, gImage_gatoRojoRotado, 250, 128, GxEPD_RED);
-  display.drawBitmap(0, 0, gImage_gatoAmarilloRotado, 250, 128, GxEPD_YELLOW);
+  display.drawBitmap(6, 6, gImage_cafe120, 120, 120, GxEPD_BLACK);
    
-  // Configuración del texto
+  // Imprimir "Latte"
   display.setTextColor(GxEPD_BLACK);
-  display.setCursor(15, 20);
-  display.setFont(&FreeMonoBold12pt7b); 
+  display.setCursor(145, 50);
+  display.setFont(&FreeSansBold18pt7b); 
+  display.print ("Latte");
 
-  // Imprimir texto
-  display.print ("ACME Corporation");
+  // Imprimir "-10%"
+  display.setTextColor(GxEPD_RED);
+  display.setCursor(130, 100);
+  display.setFont(&FreeSansBold24pt7b); 
+  display.print ("-10%");
 
   // Refrescar pantalla
   display.display ();
