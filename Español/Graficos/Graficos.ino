@@ -4,6 +4,8 @@
 //Incluir las definiciones de las fuentes
 #include <Fonts/FreeMonoBold12pt7b.h>
 
+// Incluir el bitmap
+
 
 // Definición de pines para placa adaptadora de Seeed Studio
 const int EINK_BUSY = D5;   // D5
