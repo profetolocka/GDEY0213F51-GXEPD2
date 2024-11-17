@@ -1,7 +1,7 @@
 // Incluir las bibliotecas necesarias
 #include <GxEPD2_4C.h>
 
-//Incluir las definiciones de las fuentes
+// Incluir las definiciones de las fuentes
 #include <Fonts/FreeSansBold18pt7b.h>
 #include <Fonts/FreeSansBold12pt7b.h>
 
@@ -9,17 +9,38 @@
 #include "ReunionesNegro.h"
 #include "ReunionesAmarillo.h"
 
-
 // Definición de pines para placa adaptadora de Seeed Studio
 const int EINK_BUSY = D5;   // D5
 const int EINK_RST  = D0;   // D0
 const int EINK_DC   = D3;   // D3
 const int EINK_CS   = D1;   // D1
-const int EINK_SCK  = D8;  // D8 (SCK)
+const int EINK_SCK  = D8;   // D8 (SCK)
 const int EINK_MOSI = D10;  // D10 (MOSI)
 
-// Crea el objeto asociado a la pantalla
-GxEPD2_4C<GxEPD2_213c_GDEY0213F51, GxEPD2_213c_GDEY0213F51::HEIGHT/2> display(GxEPD2_213c_GDEY0213F51(EINK_CS, EINK_DC, EINK_RST, EINK_BUSY));
+// Crear el objeto asociado a la pantalla
+GxEPD2_4C<
+  GxEPD2_213c_GDEY0213F51,
+  GxEPD2_213c_GDEY0213F51::HEIGHT / 2
+> display(GxEPD2_213c_GDEY0213F51(
+  EINK_CS, EINK_DC, EINK_RST, EINK_BUSY));
+
+// Definir la función ShowBusy
+void ShowBusy() {
+    // Imprimir "Busy"
+    display.setTextColor(GxEPD_RED);
+    display.setCursor(10, 100);
+    display.setFont(&FreeSansBold18pt7b); 
+    display.print("BUSY");
+}
+
+// Definir la función ShowFree
+void ShowFree() {
+    // Imprimir "Free"
+    display.setTextColor(GxEPD_RED);
+    display.setCursor(10, 100);
+    display.setFont(&FreeSansBold18pt7b); 
+    display.print("FREE");
+}
 
 void setup() 
 {
@@ -30,7 +51,7 @@ void setup()
   
   display.setTextSize(1);
 
-  // Start the pagination cycle
+  // Iniciar el ciclo de paginación
   display.firstPage();
   do
   {
@@ -45,17 +66,14 @@ void setup()
     display.setTextColor(GxEPD_BLACK);
     display.setCursor(12, 40);
     display.setFont(&FreeSansBold12pt7b); 
-    display.print ("ROOM 1");
+    display.print("ROOM 1");
 
-    // Imprimir "Busy"
-    display.setTextColor(GxEPD_RED);
-    display.setCursor(10, 100);
-    display.setFont(&FreeSansBold18pt7b); 
-    display.print ("BUSY");
-  }
-  while (display.nextPage());  // Repeat while there are pages left
+    // Llamar a la función ShowBusy()
+    ShowFree();
+
+  } while (display.nextPage());  // Repetir mientras falten páginas
 }
 
 void loop() {
-  //No hace nada
+  // No hace nada
 }
