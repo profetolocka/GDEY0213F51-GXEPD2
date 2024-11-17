@@ -1,13 +1,10 @@
 // Incluir las bibliotecas necesarias
 #include <GxEPD2_4C.h>
 
-//Incluir las definiciones de las fuentes
-#include <Fonts/FreeMonoBold12pt7b.h>
-
-// Incluir el bitmap
-#include "gatoNegroRotado.h"
-#include "gatoRojoRotado.h"
-#include "gatoAmarilloRotado.h"
+// Incluir los bitmaps de cada color
+#include "gatoNegroRot.h"
+#include "gatoRojoRot.h"
+#include "gatoAmarilloRot.h"
 
 // Definición de pines para placa adaptadora de Seeed Studio
 const int EINK_BUSY = D5;   // D5
@@ -25,26 +22,15 @@ void setup()
   // Inicialización del epaper
   display.init(115200);
   display.setFullWindow();
-  display.fillScreen(GxEPD_WHITE);
   display.setRotation(1);
-  
-  display.setTextSize(1);
-  
+    
   // Limpiar la pantalla
   display.fillScreen(GxEPD_WHITE); // Fondo blanco
 
-  // Cargar bitmap
-  display.drawBitmap(0, 0, gImage_gatoNegroRotado, 250, 128, GxEPD_BLACK);
-  display.drawBitmap(0, 0, gImage_gatoRojoRotado, 250, 128, GxEPD_RED);
-  display.drawBitmap(0, 0, gImage_gatoAmarilloRotado, 250, 128, GxEPD_YELLOW);
-   
-  // Configuración del texto
-  display.setTextColor(GxEPD_BLACK);
-  display.setCursor(15, 20);
-  display.setFont(&FreeMonoBold12pt7b); 
-
-  // Imprimir texto
-  display.print ("ACME Corporation");
+  // Mostrar bitmaps (agregar offset en Y)
+  display.drawBitmap(0, 6, gImage_gatoNegroRot, 250, 122, GxEPD_BLACK);
+  display.drawBitmap(0, 6, gImage_gatoRojoRot, 250, 122, GxEPD_RED);
+  display.drawBitmap(0, 6, gImage_gatoAmarilloRot, 250, 122, GxEPD_YELLOW);
 
   // Refrescar pantalla
   display.display ();
