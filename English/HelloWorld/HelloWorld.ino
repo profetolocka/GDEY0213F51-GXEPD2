@@ -12,12 +12,11 @@ const int EINK_CS   = D1;   // D1
 const int EINK_SCK  = D8;  // D8 (SCK)
 const int EINK_MOSI = D10;  // D10 (MOSI)
 
-
 // Create display object
-GxEPD2_4C<GxEPD2_213c_GDEY0213F51, GxEPD2_213c_GDEY0213F51::HEIGHT> display(GxEPD2_213c_GDEY0213F51(EINK_CS, EINK_DC, EINK_RST, EINK_BUSY));
+GxEPD2_4C<GxEPD2_213c_GDEY0213F51, GxEPD2_213c_GDEY0213F51::HEIGHT> 
+ display(GxEPD2_213c_GDEY0213F51(EINK_CS, EINK_DC, EINK_RST, EINK_BUSY));
 
-void setup() 
-{
+void setup() {
   // Initialize the e-paper
   display.init(115200);
   display.setFullWindow();
