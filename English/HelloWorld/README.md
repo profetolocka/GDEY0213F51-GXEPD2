@@ -3,7 +3,7 @@
 
 This is a basic example that demonstrates the use of some GxEPD2 methods. It displays the text "Hello World!" on the screen.
 
-![alt text](../Images/HelloWorld.png)
+![alt text](../../Images/HelloWorld.png)
 
 ## Contact
 
