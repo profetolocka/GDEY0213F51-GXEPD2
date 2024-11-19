@@ -3,7 +3,7 @@
 
 This example shows how to use the different fonts provided by the GxEPD2 library.
 
-![alt text](../../Images/Fonts.png)
+![alt text](../../Images/Fonts.jpg)
 
 ## Contact
 
